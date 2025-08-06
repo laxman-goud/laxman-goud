@@ -21,18 +21,35 @@
 ```js
 Languages:  JavaScript, Python, HTML, CSS
 Frameworks: React.js, Node.js, Express.js
+Styling: Tailwind CSS
 Database:   MongoDB
 Tools:      Git, GitHub, VSCode, Postman
 ```
 
 ---
+<h2 align="center" style="background-color:#1a1b27; color:#00ffff; padding:10px; border-radius:10px;">📊 GitHub Analytics</h2>
 
-### 📈 GitHub Stats
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=laxman-goud&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true" alt="GitHub Stats" />
+</div>
 
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=laxman-goud&show_icons=true&theme=github_dark" alt="Laxman's GitHub stats" height="180"/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=laxman-goud&layout=compact&theme=github_dark" height="180"/>
-</p>
+<div align="center">
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=laxman-goud&theme=tokyonight&hide_border=true" alt="GitHub Streak" />
+</div>
+
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=laxman-goud&layout=compact&theme=tokyonight&hide_border=true" alt="Top Languages" />
+</div>
+
+---
+
+## 🏆 GitHub Trophies
+
+<div align="center">
+  <img src="https://github-profile-trophy.vercel.app/?username=laxman-goud&theme=tokyonight&no-frame=true&no-bg=false&margin-w=4" alt="GitHub Trophies" />
+</div>
+
+---
 
 ---
 
