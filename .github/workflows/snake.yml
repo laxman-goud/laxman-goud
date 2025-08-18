@@ -5,6 +5,9 @@ on:
     - cron: "0 0 * * *"   # Runs every day at midnight
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   generate:
     runs-on: ubuntu-latest
@@ -16,7 +19,8 @@ jobs:
         uses: Platane/snk@v3
         with:
           github_user_name: laxman-goud
-          svg_out_path: dist/github-contribution-grid-snake.svg
+          outputs: |
+            dist/github-contribution-grid-snake.svg
 
       - name: Upload Snake to GitHub Pages
         uses: crazy-max/ghaction-github-pages@v3
