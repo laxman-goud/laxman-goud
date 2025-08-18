@@ -1,4 +1,3 @@
-
 <h1 align="center">Hi 👋, I'm Laxman Goud</h1>
 <h3 align="center">🚀 Full Stack Developer | Passionate Learner | Tech Explorer</h3>
 
@@ -8,15 +7,15 @@
 
 ---
 
-### 🧑‍💻 About Me
-- 🎓 I'm an engineering student passionate about **Web Development** and **building real-world applications**.
-- 🔭 I’m currently exploring **MERN stack**, **APIs**, and **Deployment techniques**.
-- 🌱 Learning everyday to get better at JavaScript, React, Node.js, and backend systems.
-- 💡 I enjoy working on personal projects that help solve small problems or improve productivity.
+## 🧑‍💻 About Me
+- 🎓 Engineering student passionate about **Web Development** & **real-world applications**.  
+- 🔭 Exploring **MERN stack**, **APIs**, and **Deployment techniques**.  
+- 🌱 Currently leveling up in JavaScript, React, Node.js, and backend systems.  
+- 💡 Love building personal projects that solve small but meaningful problems.  
 
 ---
 
-### 🛠️ Tech Stack
+## 🛠️ Tech Stack
 
 ```js
 Languages:  JavaScript, Python, HTML, CSS
@@ -27,7 +26,8 @@ Tools:      Git, GitHub, VSCode, Postman
 ```
 
 ---
-<h2 align="center" style="background-color:#1a1b27; color:#00ffff; padding:10px; border-radius:10px;">📊 GitHub Analytics</h2>
+
+<h2 align="center">📊 GitHub Analytics</h2>
 
 <div align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=laxman-goud&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true" alt="GitHub Stats" />
@@ -43,17 +43,31 @@ Tools:      Git, GitHub, VSCode, Postman
 
 ---
 
+## 📈 Lines of Code (LOC) Metrics
+
+<p align="center">
+  <img src="https://github.com/laxman-goud/laxman-goud/blob/main/github-metrics.svg" alt="LOC Metrics" />
+</p>
+
+---
+
+## 🐍 Contribution Graph Snake
+
+<p align="center">
+  <img src="https://github.com/laxman-goud/laxman-goud/blob/output/github-contribution-grid-snake.svg" alt="snake animation" />
+</p>
+
+---
+
 ## 🏆 GitHub Trophies
 
-<div align="center">
+<p align="center">
   <img src="https://github-profile-trophy.vercel.app/?username=laxman-goud&theme=tokyonight&no-frame=true&no-bg=false&margin-w=4" alt="GitHub Trophies" />
-</div>
+</p>
 
 ---
 
----
-
-### 📫 Connect with Me
+## 📫 Connect with Me
 
 <p align="center">
   <a href="https://www.linkedin.com/in/laxman-gaddamidi" target="_blank">
@@ -72,5 +86,5 @@ Tools:      Git, GitHub, VSCode, Postman
 
 ---
 
-### ⚡ Fun Fact
-- I like debugging code more than writing it from scratch 😄
+## ⚡ Fun Fact
+- I enjoy debugging code more than writing it from scratch 😄  
