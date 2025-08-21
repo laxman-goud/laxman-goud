@@ -1,34 +1,36 @@
-name: Lines of Code Stats
+name: 📊 Lines of Code Stats
 
 on:
-  push:
-    branches: [ main ]
-  workflow_dispatch:
+  workflow_dispatch:        # Run manually
+  schedule:
+    - cron: "0 0 * * 0"     # Runs weekly (Sunday at midnight)
 
 jobs:
-  cloc:
+  count-loc:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v3
+      # Checkout repo
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-      - name: Count Lines of Code (cloc)
-        uses: djdefi/cloc-action@6
+      # Install cloc
+      - name: Install cloc
+        run: sudo apt-get install -y cloc
+
+      # Run cloc and save to file
+      - name: Generate cloc report
+        run: |
+          cloc --by-file --include-lang=JavaScript,HTML,CSS,Python . > cloc-report.txt
+          cat cloc-report.txt
+
+      # Update README with stats
+      - name: Update README with cloc stats
+        uses: gautamkrishnar/keepalive-workflow@master
         with:
-          options: "--exclude-dir=node_modules,.github --md"
-          report-file: cloc-report.md
-
-      - name: Update README with LOC stats
-        run: |
-          echo "### 📊 Lines of Code Stats" > temp.md
-          cat cloc-report.md >> temp.md
-          echo "" >> temp.md
-          cat README.md >> temp.md
-          mv temp.md README.md
-
-      - name: Commit changes
-        run: |
-          git config --global user.name "github-actions"
-          git config --global user.email "github-actions@github.com"
-          git add README.md
-          git commit -m "Update LOC stats [skip ci]" || echo "No changes to commit"
-          git push
+          filename: README.md
+          marker: cloc
+          content: |
+            ```txt
+            $(cat cloc-report.txt)
+            ```
