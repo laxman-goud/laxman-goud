@@ -2,7 +2,7 @@ name: Generate Metrics
 
 on:
   schedule: [{cron: "0 0 * * *"}]
-  workflow_dispatch:             
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -16,6 +16,6 @@ jobs:
           token: ${{ secrets.METRICS_TOKEN }}
           base: header, activity
           plugin_lines: yes
-          plugin_lines_sections: total, yearly, repositories, history
+          plugin_lines_sections: total, yearly
           plugin_lines_repositories_limit: 5
           plugin_lines_history_limit: 3
