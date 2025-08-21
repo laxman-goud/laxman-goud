@@ -1,0 +1,19 @@
+name: Code Analyzer
+
+on:
+  schedule:
+    - cron: "0 0 * * 0" # runs weekly
+  workflow_dispatch: # allows manual run
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Count lines of code
+        uses: djdefi/github-code-analyzer@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          update-readme: true
