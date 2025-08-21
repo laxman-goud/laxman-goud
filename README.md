@@ -49,6 +49,9 @@ Tools:      Git, GitHub, VSCode, Postman
   <img src="https://github.com/laxman-goud/laxman-goud/blob/main/github-metrics.svg" alt="LOC Metrics" />
 </p>
 
+<!--START_SECTION:github-code-analyzer-->
+<!--END_SECTION:github-code-analyzer-->
+
 ---
 
 ## 🐍 Contribution Graph Snake
