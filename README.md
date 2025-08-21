@@ -49,8 +49,10 @@ Tools:      Git, GitHub, VSCode, Postman
   <img src="https://github.com/laxman-goud/laxman-goud/blob/main/github-metrics.svg" alt="LOC Metrics" />
 </p>
 
-<!--START_SECTION:github-code-analyzer-->
-<!--END_SECTION:github-code-analyzer-->
+### 📊 Lines of Code Stats
+<!-- START_SECTION:cloc -->
+<!-- END_SECTION:cloc -->
+
 
 ---
 
