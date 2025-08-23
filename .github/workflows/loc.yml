@@ -1,36 +1,31 @@
 name: 📊 Lines of Code Stats
 
 on:
-  workflow_dispatch:        # Run manually
+  workflow_dispatch:
   schedule:
-    - cron: "0 0 * * 0"     # Runs weekly (Sunday at midnight)
+    - cron: "0 0 * * 0"
 
 jobs:
   count-loc:
     runs-on: ubuntu-latest
 
     steps:
-      # Checkout repo
       - name: Checkout code
         uses: actions/checkout@v3
 
-      # Install cloc
       - name: Install cloc
         run: sudo apt-get install -y cloc
 
-      # Run cloc and save to file
       - name: Generate cloc report
-        run: |
-          cloc --by-file --include-lang=JavaScript,HTML,CSS,Python . > cloc-report.txt
-          cat cloc-report.txt
+        run: cloc --by-file --include-lang=JavaScript,HTML,CSS,Python . > cloc-report.txt
 
-      # Update README with stats
       - name: Update README with cloc stats
-        uses: gautamkrishnar/keepalive-workflow@master
+        uses: kencx/insert-text-action@v1
         with:
-          filename: README.md
-          marker: cloc
-          content: |
+          file: README.md
+          start: "<!-- START_SECTION:cloc -->"
+          end: "<!-- END_SECTION:cloc -->"
+          text: |
             ```txt
             $(cat cloc-report.txt)
             ```
