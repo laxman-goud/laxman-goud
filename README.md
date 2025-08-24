@@ -43,19 +43,6 @@ Tools:      Git, GitHub, VSCode, Postman
 
 ---
 
-## 📈 Lines of Code (LOC) Metrics
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/laxman-goud/laxman-goud/main/github-metrics.svg" alt="LOC Metrics" />
-</p>
-
-### 📊 Lines of Code Stats
-<!-- START_SECTION:cloc -->
-<!-- END_SECTION:cloc -->
-
-
----
-
 ## 🐍 Contribution Graph Snake
 
 <p align="center">
