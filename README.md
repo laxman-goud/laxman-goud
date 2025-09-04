@@ -43,6 +43,14 @@ Tools:      Git, GitHub, VSCode, Postman
 
 ---
 
+## 📏 Code Metrics
+
+- **Total Lines of Code:** <!--TOTAL_LOC-->
+- **Top Repositories by LOC:**
+<!--TOP_REPOS_LOC-->
+
+---
+
 ## 🐍 Contribution Graph Snake
 
 <p align="center">
