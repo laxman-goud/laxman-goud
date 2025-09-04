@@ -44,15 +44,12 @@ jobs:
 
       - name: Update README.md
         run: |
-          TOTAL_LOC=$(cat $GITHUB_ENV | grep TOTAL_LOC | cut -d= -f2)
+          TOTAL_LOC=${{ env.TOTAL_LOC }}
           TOP_REPOS=$(cat top_repos.txt | sed 's/^/- /')
 
           # Replace placeholders
           sed -i "s|<!--TOTAL_LOC-->|$TOTAL_LOC|" README.md
-          sed -i "/<!--TOP_REPOS_LOC-->/{
-            r top_repos.txt
-            d
-          }" README.md
+          awk -v repos="$TOP_REPOS" '/<!--TOP_REPOS_LOC-->/ {print repos; next}1' README.md > temp && mv temp README.md
 
       - name: Commit changes
         run: |
