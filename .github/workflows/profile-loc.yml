@@ -1,0 +1,63 @@
+name: Update Profile LOC Metrics
+
+on:
+  schedule:
+    - cron: "0 0 * * *"   # every midnight
+  workflow_dispatch:
+
+jobs:
+  update-loc:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout profile repo
+        uses: actions/checkout@v3
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y tokei jq gh
+
+      - name: Authenticate GitHub CLI
+        run: echo "${{ secrets.GITHUB_TOKEN }}" | gh auth login --with-token
+
+      - name: Fetch all repos and clone
+        run: |
+          mkdir repos
+          cd repos
+          gh repo list laxman-goud --limit 50 --json name,sshUrl -q '.[] | .sshUrl' | while read repo; do
+            git clone --depth 1 "$repo"
+          done
+
+      - name: Count LOC for each repo
+        run: |
+          cd repos
+          > ../loc_summary.txt
+          total=0
+          for dir in */; do
+            loc=$(tokei "$dir" -o json | jq '.Total.code')
+            echo "$dir: $loc" >> ../loc_summary.txt
+            total=$((total + loc))
+          done
+          echo "TOTAL_LOC=$total" >> $GITHUB_ENV
+          sort -t: -k2 -nr ../loc_summary.txt | head -5 > ../top_repos.txt
+
+      - name: Update README.md
+        run: |
+          TOTAL_LOC=$(cat $GITHUB_ENV | grep TOTAL_LOC | cut -d= -f2)
+          TOP_REPOS=$(cat top_repos.txt | sed 's/^/- /')
+
+          # Replace placeholders
+          sed -i "s|<!--TOTAL_LOC-->|$TOTAL_LOC|" README.md
+          sed -i "/<!--TOP_REPOS_LOC-->/{
+            r top_repos.txt
+            d
+          }" README.md
+
+      - name: Commit changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git commit -m "chore: update total LOC metrics [skip ci]" || echo "No changes"
+          git push
