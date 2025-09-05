@@ -2,11 +2,8 @@ name: Update Profile LOC Metrics
 
 on:
   schedule:
-    - cron: "0 0 * * *"   # every midnight (UTC)
-  workflow_dispatch:
-
-permissions:
-  contents: write
+    - cron: "0 0 * * *"   # Runs daily at midnight UTC
+  workflow_dispatch:       # Allow manual trigger
 
 jobs:
   update-loc:
@@ -15,68 +12,50 @@ jobs:
       - name: Checkout profile repo
         uses: actions/checkout@v3
 
-      - name: Install utilities and tokei (prebuilt)
+      - name: Install dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y jq curl tar git
-          # Download a prebuilt tokei binary (adjust version if needed)
-          curl -L "https://github.com/XAMPPRocky/tokei/releases/download/v12.1.2/tokei-x86_64-unknown-linux-gnu.tar.gz" -o tokei.tar.gz
-          tar -xzf tokei.tar.gz
+          sudo apt-get install -y jq
+          curl -sSLf https://github.com/XAMPPRocky/tokei/releases/download/v12.1.2/tokei-x86_64-unknown-linux-gnu.tar.gz | tar xz
           sudo mv tokei /usr/local/bin/
-          tokei --version
 
-      - name: Fetch repo list (public) or use PAT if provided
-        env:
-          PROFILE_PAT: ${{ secrets.PROFILE_LOC_PAT }}   # optional, set if you want private repos included
-          GITHUB_USER: "laxman-goud"
+      - name: Fetch all repos
         run: |
-          # If PROFILE_LOC_PAT secret exists, use authenticated endpoint (includes private repos the token has access to)
-          if [ -n "$PROFILE_PAT" ]; then
-            echo "Using PROFILE_LOC_PAT to fetch repos (private included if token has scope)."
-            curl -s -H "Authorization: token $PROFILE_PAT" "https://api.github.com/user/repos?per_page=100" | jq -r '.[].ssh_url' > repo_urls.txt
-          else
-            echo "Fetching public repos for $GITHUB_USER"
-            curl -s "https://api.github.com/users/$GITHUB_USER/repos?per_page=100" | jq -r '.[].ssh_url' > repo_urls.txt
-          fi
-
-          # clone repos shallow
           mkdir repos
           cd repos
-          while read repo; do
-            if [ -n "$repo" ]; then
-              git clone --depth 1 "$repo" || echo "clone failed: $repo"
-            fi
-          done < ../repo_urls.txt
+          gh repo list $GITHUB_ACTOR --limit 100 --json name,sshUrl \
+            --jq '.[] | .sshUrl' > repos.txt
 
-      - name: Count LOC for each repo
+          while read repo; do
+            git clone --depth 1 $repo || true
+          done < repos.txt
+
+      - name: Calculate LOC
         run: |
           cd repos
-          > ../loc_summary.txt
-          total=0
+          TOTAL_LOC=0
+          echo "" > ../top_repos.txt
+
           for dir in */; do
-            # skip if not a directory
             [ -d "$dir" ] || continue
-            # count LOC with tokei
-            loc=$(tokei "$dir" -o json | jq '.Total.code // 0')
-            repo_name=${dir%/}
-            echo "$repo_name: $loc" >> ../loc_summary.txt
-            total=$((total + loc))
+            cd "$dir"
+            LOC=$(tokei -o json . | jq '.Total.code')
+            cd ..
+            echo "${dir%/}: $LOC LOC" >> ../top_repos.txt
+            TOTAL_LOC=$((TOTAL_LOC + LOC))
           done
-          echo "TOTAL_LOC=$total" >> $GITHUB_ENV
-          sort -t: -k2,2nr ../loc_summary.txt | head -n 5 > ../top_repos.txt
 
-      - name: Update README.md placeholders
+          echo $TOTAL_LOC > ../total_loc.txt
+          sort -t: -k2 -nr ../top_repos.txt | head -n 5 > ../top_repos_sorted.txt
+
+      - name: Update README
         run: |
-          TOTAL_LOC=${{ env.TOTAL_LOC }}
-          echo "Total LOC computed: $TOTAL_LOC"
-          # prefix top repos lines with "- "
-          sed 's/^/- /' top_repos.txt > top_repos_md.txt
+          TOTAL_LOC=$(cat total_loc.txt)
 
-          # replace TOTAL_LOC placeholder
+          # Replace placeholders
           sed -i "s|<!--TOTAL_LOC-->|$TOTAL_LOC|g" README.md
 
-          # replace TOP_REPOS_LOC placeholder with the block of top repos
-          awk -v replfile="top_repos_md.txt" '{
+          awk -v replfile="top_repos_sorted.txt" '{
             if($0=="<!--TOP_REPOS_LOC-->"){
               while((getline line < replfile) > 0) print line;
               next
@@ -84,12 +63,10 @@ jobs:
             print
           }' README.md > README.tmp && mv README.tmp README.md
 
-      - name: Commit and push changes
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Commit & Push changes
         run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add README.md
-          git commit -m "chore: update total LOC metrics [skip ci]" || echo "No changes to commit"
+          git commit -m "chore: update LOC metrics [skip ci]" || echo "No changes"
           git push
