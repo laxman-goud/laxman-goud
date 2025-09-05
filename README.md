@@ -45,9 +45,9 @@ Tools:      Git, GitHub, VSCode, Postman
 
 ## 📏 Code Metrics
 
-- **Total Lines of Code:** <!--TOTAL_LOC-->
+- **Total Lines of Code:** 0
 - **Top Repositories by LOC:**
-<!--TOP_REPOS_LOC-->
+
 
 
 ---
