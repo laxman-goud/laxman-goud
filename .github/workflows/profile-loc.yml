@@ -17,8 +17,10 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Install GitHub CLI
-        run: sudo apt-get install -y gh jq
+      - name: Install GitHub CLI + jq
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y gh jq
 
       - name: Fetch all repos
         env:
@@ -35,9 +37,8 @@ jobs:
 
       - name: Install Tokei
         run: |
-          curl -L https://github.com/XAMPPRocky/tokei/releases/latest/download/tokei-x86_64-unknown-linux-gnu.tar.gz -o tokei.tar.gz
-          tar -xzf tokei.tar.gz
-          sudo mv tokei /usr/local/bin/
+          sudo apt-get update
+          sudo apt-get install -y tokei
 
       - name: Calculate LOC
         run: |
@@ -49,6 +50,7 @@ jobs:
             [ -d "$dir" ] || continue
             cd "$dir"
             JSON=$(tokei -o json .)
+            echo "DEBUG: $dir → $JSON"   # 👈 Debug info
             LOC=$(echo "$JSON" | jq '.Totals.code // 0')
             cd ..
             echo "${dir%/}: $LOC LOC" >> ../top_repos.txt
@@ -66,7 +68,6 @@ jobs:
           echo "- **Top Repositories by LOC:**" >> code_metrics.md
           cat top_repos_sorted.txt | sed 's/^/  - /' >> code_metrics.md
 
-          # Replace only the metrics block
           awk 'BEGIN{found=0} /## 📏 Code Metrics/{print;system("cat code_metrics.md");found=1;next} !found{print}' README.md > README.tmp
           mv README.tmp README.md
 
