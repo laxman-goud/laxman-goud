@@ -57,13 +57,13 @@ jobs:
             # skip if not a directory
             [ -d "$dir" ] || continue
             # count LOC with tokei
-            loc=$(tokei "$dir" -o json | jq '.Total.code')
+            loc=$(tokei "$dir" -o json | jq '.Total.code // 0')
             repo_name=${dir%/}
             echo "$repo_name: $loc" >> ../loc_summary.txt
             total=$((total + loc))
           done
           echo "TOTAL_LOC=$total" >> $GITHUB_ENV
-          sort -t: -k2 -nr ../loc_summary.txt | head -n 5 > ../top_repos.txt
+          sort -t: -k2,2nr ../loc_summary.txt | head -n 5 > ../top_repos.txt
 
       - name: Update README.md placeholders
         run: |
