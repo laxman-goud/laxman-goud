@@ -6,7 +6,7 @@ on:
   workflow_dispatch:       # Allow manual trigger
 
 permissions:
-  contents: write   # ✅ allow pushing to your repo
+  contents: write   
 
 jobs:
   update-loc:
@@ -50,7 +50,7 @@ jobs:
           for dir in */; do
             [ -d "$dir" ] || continue
             cd "$dir"
-            LOC=$(tokei -o json . | jq '.Total.code')
+            LOC=$(tokei -o json . | jq '.Totals.code // 0')
             cd ..
             echo "${dir%/}: $LOC LOC" >> ../top_repos.txt
             TOTAL_LOC=$((TOTAL_LOC + LOC))
@@ -58,6 +58,7 @@ jobs:
 
           echo $TOTAL_LOC > ../total_loc.txt
           sort -t: -k2 -nr ../top_repos.txt | head -n 5 > ../top_repos_sorted.txt
+
 
       - name: Update README
         run: |
