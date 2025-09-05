@@ -16,13 +16,19 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y jq
+          # Install GitHub CLI
+          type -p gh >/dev/null || sudo apt-get install -y gh
+          # Install tokei
           curl -sSLf https://github.com/XAMPPRocky/tokei/releases/download/v12.1.2/tokei-x86_64-unknown-linux-gnu.tar.gz | tar xz
           sudo mv tokei /usr/local/bin/
 
       - name: Fetch all repos
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           mkdir repos
           cd repos
+          # List repos using GitHub CLI
           gh repo list $GITHUB_ACTOR --limit 100 --json name,sshUrl \
             --jq '.[] | .sshUrl' > repos.txt
 
@@ -52,12 +58,16 @@ jobs:
         run: |
           TOTAL_LOC=$(cat total_loc.txt)
 
-          # Replace placeholders
+          # Reset placeholders before inserting new values
+          sed -i "s|Total Lines of Code:.*|Total Lines of Code: <!--TOTAL_LOC-->|g" README.md
+          sed -i "/<!--TOP_REPOS_LOC-->/q" README.md
+
+          # Insert new values
           sed -i "s|<!--TOTAL_LOC-->|$TOTAL_LOC|g" README.md
 
           awk -v replfile="top_repos_sorted.txt" '{
             if($0=="<!--TOP_REPOS_LOC-->"){
-              while((getline line < replfile) > 0) print line;
+              while((getline line < replfile) > 0) print "- " line;
               next
             }
             print
