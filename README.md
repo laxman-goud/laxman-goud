@@ -40,16 +40,6 @@ Tools:      Git, GitHub, VSCode, Postman
 <div align="center">
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=laxman-goud&layout=compact&theme=tokyonight&hide_border=true" alt="Top Languages" />
 </div>
-
----
-
-## 📏 Code Metrics
-
-- **Total Lines of Code:** 0
-- **Top Repositories by LOC:**
-
-
-
 ---
 
 ## 🐍 Contribution Graph Snake
