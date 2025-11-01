@@ -19,7 +19,7 @@
 
 ```js
 Languages:  JavaScript, Python, HTML, CSS
-Frameworks: React.js, Node.js, Express.js, Next.js
+Frameworks: React.js, Node.js, Express.js
 Styling:    Tailwind CSS
 Database:   MongoDB
 Tools:      Git, GitHub, VSCode, Postman
