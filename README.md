@@ -8,10 +8,11 @@
 ---
 
 ## 🧑‍💻 About Me
-- 🎓 Engineering student passionate about **Web Development** & **real-world applications**.  
-- 🔭 Exploring **MERN stack**, **APIs**, and **Deployment techniques**.  
-- 🌱 Currently leveling up in JavaScript, React, Node.js, and backend systems.  
-- 💡 Love building personal projects that solve small but meaningful problems.  
+
+- 🎓 Engineering student passionate about **Web Development** & **real-world applications**.
+- 🔭 Exploring **MERN stack**, **APIs**, and **Deployment techniques**.
+- 🌱 Currently leveling up in JavaScript, React, Node.js, and backend systems.
+- 💡 Love building personal projects that solve small but meaningful problems.
 
 ---
 
@@ -30,30 +31,18 @@ Tools:      Git, GitHub, VSCode, Postman
 <h2 align="center">📊 GitHub Analytics</h2>
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=laxman-goud&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true" alt="GitHub Stats" />
+  <img src="https://github-readme-stats.vercel.app/api?username=laxman-goud&hide_title=false&hide_rank=false&show_icons=true&include_all_commits=true&count_private=true&disable_animations=false&theme=dracula&locale=en&hide_border=false&order=1" height="150" alt="stats graph"  />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=laxman-goud&locale=en&hide_title=false&layout=compact&card_width=320&langs_count=5&theme=dracula&hide_border=false&order=2" height="150" alt="languages graph"  />
 </div>
 
-<div align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=laxman-goud&theme=tokyonight&hide_border=true" alt="GitHub Streak" />
-</div>
+###
 
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=laxman-goud&layout=compact&theme=tokyonight&hide_border=true" alt="Top Languages" />
-</div>
 ---
 
 ## 🐍 Contribution Graph Snake
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/laxman-goud/laxman-goud/output/github-contribution-grid-snake.svg" alt="snake animation" />
-</p>
-
----
-
-## 🏆 GitHub Trophies
-
-<p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=laxman-goud&theme=tokyonight&no-frame=true&no-bg=false&margin-w=4" alt="GitHub Trophies" />
 </p>
 
 ---
@@ -78,4 +67,5 @@ Tools:      Git, GitHub, VSCode, Postman
 ---
 
 ## ⚡ Fun Fact
-- I enjoy debugging code more than writing it from scratch 😄  
+
+- I enjoy debugging code more than writing it from scratch 😄
