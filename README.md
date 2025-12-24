@@ -19,23 +19,31 @@
 ## 🛠️ Tech Stack
 
 ```js
-Languages:  JavaScript, Python, HTML, CSS
-Frameworks: React.js, Node.js, Express.js
-Styling:    Tailwind CSS
-Database:   MongoDB
-Tools:      Git, GitHub, VSCode, Postman
-```
+Languages:   JavaScript, Python, HTML, CSS
+Frameworks:  React.js, Node.js, Express.js
+Styling:     Tailwind CSS
+Database:    MongoDB
+Tools:       Git, GitHub, VSCode, Postman
+````
 
 ---
 
-<h2 align="center">📊 GitHub Analytics</h2>
+## 📊 GitHub Analytics
+
+### ⚡ Streak Stats
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=laxman-goud&hide_title=false&hide_rank=false&show_icons=true&include_all_commits=true&count_private=true&disable_animations=false&theme=dracula&locale=en&hide_border=false&order=1" height="150" alt="stats graph"  />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=laxman-goud&locale=en&hide_title=false&layout=compact&card_width=320&langs_count=5&theme=dracula&hide_border=false&order=2" height="150" alt="languages graph"  />
+
+![GitHub Streak](https://nirzak-streak-stats.vercel.app/?user=laxman-goud\&theme=aura\&hide_border=false)
+
 </div>
 
-###
+### 📈 GitHub Stats & Languages
+
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=laxman-goud&hide_title=false&hide_rank=false&show_icons=true&include_all_commits=true&count_private=true&disable_animations=false&theme=dracula&locale=en&hide_border=false&order=1" height="150" alt="stats graph" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=laxman-goud&locale=en&hide_title=false&layout=compact&card_width=320&langs_count=5&theme=dracula&hide_border=false&order=2" height="150" alt="languages graph" />
+</div>
 
 ---
 
@@ -68,4 +76,4 @@ Tools:      Git, GitHub, VSCode, Postman
 
 ## ⚡ Fun Fact
 
-- I enjoy debugging code more than writing it from scratch 😄
+* I enjoy debugging code more than writing it from scratch 😄
