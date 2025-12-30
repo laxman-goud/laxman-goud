@@ -26,49 +26,34 @@
 
 ## 🚀 Featured Projects
 
-### 🏥 MediBook — Doctor Appointment Booking System  
+### 🏥 MediBook — Doctor Appointment Booking System
 **Full-stack healthcare web application**
 
-MediBook is a complete doctor appointment booking platform that enables patients to schedule appointments online, doctors to manage their availability, and admins to oversee the entire system through a centralized dashboard.
-
-- Role-based access: **Patient / Doctor / Admin**
-- Appointment booking and schedule management
-- Secure authentication and admin controls
-- Designed as a scalable, real-world healthcare solution
+Doctor appointment booking platform for patients, doctors, and admins with role-based access and schedule management.
 
 🔗 **Source Code:** https://github.com/laxman-goud/Doctor-Appointment-Booking-System  
-🌐 **Live Demo:** https://medibook-client.vercel.app/
+🌐 **Live Demo:** https://medibook-client.vercel.app
 
 ---
 
-### 🤖 AI Resume Builder  
-**AI-powered resume builder with live editing**
+### 🤖 AI Resume Builder
+**AI-powered resume builder**
 
-An intelligent resume builder that helps users create professional resumes using AI-assisted content generation and customizable templates.
-
-- Live resume templates with **drag-and-edit sections**
-- **PDF extraction** and resume parsing
-- AI-generated content using OpenAI
-- Secure sharing with public/private access
-- Built using **MERN, OpenAI, and ImageKit**
+Create professional resumes using AI with live templates, PDF extraction, and secure sharing.
 
 🔗 **Source Code:** https://github.com/laxman-goud/AI-Resume-Builder-App  
-🌐 **Live Demo:** https://ai-resume-builder-app-inky.vercel.app/
+🌐 **Live Demo:** https://ai-resume-builder-app-inky.vercel.app
 
 ---
 
-### 💬 IntelliChat AI  
-**Full-stack AI chat application (Text & Image Generation)**
+### 💬 IntelliChat AI
+**Full-stack AI chat application**
 
-A modern AI-powered chat platform supporting both text and image generation with secure authentication and a credit-based usage system.
-
-- AI-powered chat with **text and image generation**
-- Secure authentication and authorization
-- **Credit-based usage system**
-- Built with **React, TypeScript, Node.js, MongoDB, and Gemini AI**
+AI chat platform with text & image generation, authentication, and credit-based usage.
 
 🔗 **Source Code:** https://github.com/laxman-goud/intellichat-ai  
-🌐 **Live Demo:** https://intellichat-ai-lime.vercel.app/
+🌐 **Live Demo:** https://intellichat-ai-lime.vercel.app
+
 
 
 
