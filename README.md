@@ -59,6 +59,43 @@ AI chat platform with text & image generation, authentication, and credit-based 
 
 ---
 
+
+
+Great idea 👍 — adding a **“Services / Web Solutions”** section makes your README more professional and client-ready.
+
+Below is a **clean, minimal section** you can directly insert **after Featured Projects** (or before GitHub Analytics).
+
+---
+
+## 💼 Web Solutions & Services
+
+I help individuals, startups, and small businesses build **modern, scalable, and user-friendly web applications**.
+
+### 🔧 Services I Provide
+
+* 🌐 **Full-Stack Web Development** (MERN Stack)
+* ⚛️ **Frontend Development** (React, Tailwind CSS)
+* 🖥️ **Backend & API Development** (Node.js, Express)
+* 🔐 **Authentication & Authorization Systems**
+* 🤖 **AI-Powered Web Applications**
+* 📊 **Admin Dashboards & CRUD Systems**
+* 🚀 **Deployment & Hosting** (Vercel, Render)
+* 🛠️ **Bug Fixing & Performance Optimization**
+
+### 🎯 Who This Is For
+
+* Startups & founders validating ideas
+* Students & developers needing project help
+* Small businesses going digital
+* Anyone needing a custom web solution
+
+📩 **Interested in working together?**
+Reach out via **LinkedIn, Email, or WhatsApp** at bottom — happy to collaborate!
+
+---
+
+
+
 ## 📊 GitHub Analytics
 
 ### ⚡ Streak Stats
