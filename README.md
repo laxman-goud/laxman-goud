@@ -1,18 +1,19 @@
 <h1 align="center">Hi 👋, I'm Laxman Goud</h1>
-<h3 align="center">🚀 Full Stack Developer | MERN Stack | Building Real-World Web Apps</h3>
+<h3 align="center">🚀 Full Stack Web Developer | MERN Stack | Open to Web Development Services</h3>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&duration=2000&pause=1000&color=33DDCC&center=true&vCenter=true&width=435&lines=Welcome+to+my+GitHub!;Full+Stack+Developer;Loves+building+cool+web+apps" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&duration=2000&pause=800&color=33DDCC&center=true&vCenter=true&width=500&lines=Full+Stack+Web+Developer;MERN+Stack+Specialist;Building+Web+Solutions+for+Clients;Open+for+Freelance+%26+Web+Services" alt="Typing SVG" />
 </p>
 
 ---
 
 ## 🧑‍💻 About Me
 
-- 🎓 Engineering student passionate about **Web Development** and **real-world applications**
-- 🔭 Actively exploring **MERN stack**, **APIs**, and **deployment workflows**
-- 🌱 Strengthening skills in **JavaScript, React, Node.js**, and backend systems
-- 💡 Enjoy building personal projects that solve **practical problems**
+- 🚀 Full Stack Web Developer (MERN) focused on building real-world, production-ready web applications
+- 💼 Open to freelance & web development services for startups, businesses, and individuals
+- 🔧 Experienced in React, Node.js, Express, MongoDB, REST APIs, and deployment workflows
+- 🧠 Strong problem-solving mindset with hands-on project experience
+- 📈 Passionate about delivering clean UI, scalable backend, and business-focused solutions
 
 ---
 
