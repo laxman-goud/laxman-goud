@@ -115,14 +115,6 @@ Reach out via **LinkedIn, Email, or WhatsApp** at bottom — happy to collaborat
 
 ---
 
-## 🐍 Contribution Graph Snake
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/laxman-goud/laxman-goud/output/github-contribution-grid-snake.svg" alt="GitHub contribution snake animation" />
-</p>
-
----
-
 ## 📫 Connect with Me
 
 <p align="center">
