@@ -56,16 +56,6 @@ AI chat platform with text & image generation, authentication, and credit-based 
 🌐 **Live Demo:** https://intellichat-ai-lime.vercel.app
 
 
-
-
----
-
-
-
-Great idea 👍 — adding a **“Services / Web Solutions”** section makes your README more professional and client-ready.
-
-Below is a **clean, minimal section** you can directly insert **after Featured Projects** (or before GitHub Analytics).
-
 ---
 
 ## 💼 Web Solutions & Services
