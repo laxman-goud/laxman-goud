@@ -112,10 +112,10 @@ Reach out via **LinkedIn, Email, or WhatsApp** at bottom — happy to collaborat
   <a href="https://www.linkedin.com/in/laxman-gaddamidi" target="_blank">
     <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
   </a>
-  <a href="mailto:laxmangaddamidi92@gmail.com" target="_blank">
+  <a href="mailto:laxman.thedev@gmail.com" target="_blank">
     <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
   </a>
-  <a href="https://leetcode.com/u/laxmangaddamidi/" target="_blank">
+  <a href="https://leetcode.com/u/laxman-thedev/" target="_blank">
     <img src="https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=black" />
   </a>
   <a href="https://wa.me/message/LX2EZHGDATT6D1" target="_blank">
