@@ -32,7 +32,7 @@
 
 Doctor appointment booking platform for patients, doctors, and admins with role-based access and schedule management.
 
-🔗 **Source Code:** https://github.com/laxman-goud/Doctor-Appointment-Booking-System  
+🔗 **Source Code:** https://github.com/laxman-thedev/Doctor-Appointment-Booking-System  
 🌐 **Live Demo:** https://medibook-client.vercel.app
 
 ---
@@ -42,7 +42,7 @@ Doctor appointment booking platform for patients, doctors, and admins with role-
 
 Create professional resumes using AI with live templates, PDF extraction, and secure sharing.
 
-🔗 **Source Code:** https://github.com/laxman-goud/AI-Resume-Builder-App  
+🔗 **Source Code:** https://github.com/laxman-thedev/AI-Resume-Builder-App  
 🌐 **Live Demo:** https://ai-resume-builder-app-inky.vercel.app
 
 ---
@@ -52,7 +52,7 @@ Create professional resumes using AI with live templates, PDF extraction, and se
 
 AI chat platform with text & image generation, authentication, and credit-based usage.
 
-🔗 **Source Code:** https://github.com/laxman-goud/intellichat-ai  
+🔗 **Source Code:** https://github.com/laxman-thedev/intellichat-ai  
 🌐 **Live Demo:** https://intellichat-ai-lime.vercel.app
 
 
@@ -93,15 +93,15 @@ Reach out via **LinkedIn, Email, or WhatsApp** at bottom — happy to collaborat
 
 <div align="center">
 
-![GitHub Streak](https://nirzak-streak-stats.vercel.app/?user=laxman-goud&theme=aura&hide_border=false)
+![GitHub Streak](https://nirzak-streak-stats.vercel.app/?user=laxman-thedev&theme=aura&hide_border=false)
 
 </div>
 
 ### 📈 GitHub Stats & Languages
 
 <div align="center">
-  <img src="https://github-readme-stats-orpin-six-87.vercel.app/api?username=laxman-goud&show_icons=true&theme=dracula" />
-  <img src="https://github-readme-stats-orpin-six-87.vercel.app/api/top-langs/?username=laxman-goud&layout=compact&theme=dracula" />
+  <img src="https://github-readme-stats-orpin-six-87.vercel.app/api?username=laxman-thedev&show_icons=true&theme=dracula" />
+  <img src="https://github-readme-stats-orpin-six-87.vercel.app/api/top-langs/?username=laxman-thedev&layout=compact&theme=dracula" />
 </div>
 
 ---
