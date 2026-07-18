@@ -247,6 +247,10 @@ const laxman = {
 <img src="https://img.shields.io/badge/Instagram-Follow-E4405F?style=for-the-badge&logo=instagram&logoColor=white&labelColor=0d1117"/>
 </a>
 
+<a href="https://wa.me/919398045068">
+<img src="https://img.shields.io/badge/Whatsapp-Message-00BA6E?style=for-the-badge&logo=whatsapp&logoColor=white&labelColor=0d1117"/>
+</a>
+
 <a href="mailto:laxman.thedev@gmail.com">
 <img src="https://img.shields.io/badge/Email-Contact_Me-EA4335?style=for-the-badge&logo=gmail&logoColor=white&labelColor=0d1117"/>
 </a>
